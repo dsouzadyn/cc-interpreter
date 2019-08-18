@@ -6,9 +6,9 @@
 
 int main(int argc, char const *argv[]) {
     std::string text = "";
-    while (true) {
+    while (!std::cin.eof()) {
         std::cout << "calc> ";
-        std::cin >> text;
+        getline(std::cin, text);
         if (text == "") {
             continue;
         }
@@ -17,8 +17,8 @@ int main(int argc, char const *argv[]) {
             int result = interpreter.Expr();
             std::cout << result << std::endl;
         } catch (const std::runtime_error& error) {
-            std::cout << "A runtime error occurred" << std::endl;
-            break;
+            std::cerr << error.what() << std::endl;
+            return -1;
         }
     }
     return 0;
