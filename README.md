@@ -1,6 +1,6 @@
 # InterpreterCC
 
-A simple REPL for adding and subtracting two numbers written in C++. Uses the [Bazel](https://bazel.build) build system.
+A simple REPL for adding and subtracting two numbers written in C++. Uses the [Bazel](https://bazel.build) build system. Follows the [Google Style Guide](https://google.github.io/styleguide/cppguide.html), well almost.
 
 ## Building
 1. Clone the repo
